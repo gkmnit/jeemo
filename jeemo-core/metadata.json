@@ -1,0 +1,28 @@
+{
+  "name": "jeemo_net",
+  "display_name": "Jeemo",
+  "version": "0.1.0",
+  "type": "core",
+  "interface": "universal",
+  "category": "example",
+  "description": "Menus and ratings shared between the chef, the board and residents over Logos Messaging",
+  "main": "jeemo_net_plugin",
+  "codegen": {
+    "impl_header": "jeemo_net_impl.h"
+  },
+  "dependencies": ["delivery_module"],
+
+  "nix": {
+    "packages": {
+      "build": [],
+      "runtime": []
+    },
+    "external_libraries": [],
+    "cmake": {
+      "find_packages": [],
+      "extra_sources": [],
+      "extra_include_dirs": [],
+      "extra_link_libraries": []
+    }
+  }
+}

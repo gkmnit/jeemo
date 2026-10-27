@@ -1,0 +1,5 @@
+# Nix build outputs. Each is a symlink into /nix/store; nothing to commit.
+result
+result-*
+# The per-node history file, when it is written beside the source.
+*.jsonl
