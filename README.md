@@ -1,7 +1,86 @@
 # Jeemo
 
-What is being cooked, and what people thought of it, shared between three
-screens over Logos Messaging. No server, no database anyone has to run.
+Everyone eats together. Nobody can say anything about it.
+
+Jeemo is a dining-room feedback loop with no server in it: the kitchen puts up
+each meal, the people eating rate individual dishes and ask for things, and the
+kitchen sees what is actually worth cooking again. Built for the Logos and
+Zu-Grama Field Station in Rajasthan, India.
+
+## The problem
+
+Hostels, residencies, offices, offsites, canteens, co-living houses. Anywhere a
+group eats food somebody else cooks, the same five things are missing.
+
+**Nobody knows what is coming.** No menu anywhere, or one pinned up where half
+the people never walk past. You find out what lunch is by arriving at lunch.
+
+**Nobody knows what is in it.** What went into the dish, whether it has nuts,
+whether it is veg today. The only way to find out is to find the cook and ask,
+every single time.
+
+**There is no way to say what you thought.** The loudest person at the table
+gets heard. Everybody else eats quietly and says nothing, so a dish most of the
+room disliked comes back next week.
+
+**There is no way to ask for anything.** No curd, too much chilli, something
+without onion. You either chase down the manager or you let it go.
+
+**If you do ask, you never hear back.** You have no idea whether anyone wrote it
+down, whether it is happening, or whether you should ask again.
+
+And from the other side, the kitchen is just as blind. The cook has no idea
+which dishes landed, which fell flat, what has been asked for twice already, or
+what people want more of. Months of cooking and no record of any of it.
+
+## The name
+
+**Jeemo** comes from *jeeman*, which in Rajasthani means eating together as a
+community. *Jeemo* is the invitation: eat. The idea started at the Logos and
+Zu-Grama Field Station in Rajasthan, where twenty-odd people ate together three
+times a day for nine days, and every one of the problems above showed up by the
+second meal.
+
+## What Jeemo does
+
+Three screens, and whichever ones a place needs.
+
+**In the kitchen.** Put up each meal, dish by dish, with a description,
+ingredients and how it is made. Dishes cooked before come back with one tap and
+carry their history with them. After the meal, see exactly how each dish
+landed: a score out of five, how many wanted more, and what people wrote.
+Across days, see what is worth cooking again and what should be retired.
+
+**Outside the dining room.** A screen showing today's meals in large type, with
+what is in each dish and how it was made, rotating through the day. And a panel
+showing what the kitchen has agreed to do about what people asked for, so the
+answer finds you instead of you chasing it.
+
+**At the table, or on your own machine.** Rate each dish with one tap, write a
+note if you want to, and ask the kitchen for something, attached to a particular
+dish or meal so it means something. Then hand the tablet on, and it forgets you
+completely.
+
+### What makes it different
+
+**No server.** There is nothing to host, nothing to pay for, nobody who owns the
+data. The machines pass messages to each other directly and each keeps its own
+copy. Unplug the internet and it still works across the building.
+
+**Nothing is traceable to you.** A rating carries no identity at all, and the
+one-time tag on it is thrown away the moment the tablet is handed on. A request
+carries no name either. That rule lives in the networking layer, not in the
+screens, so no future screen can quietly break it.
+
+**You cannot be singled out.** A dish's breakdown stays hidden until three
+people have answered it. In a group of twenty, one visible complaint is an
+identified complainer.
+
+**History is honest.** A dish's ratings belong to its name. Reusing a dish
+brings it back exactly as it was, and changing the recipe means giving it a new
+name, so last month's scores never quietly come to mean something else.
+
+## How it is built
 
 Built on the pattern from
 [logos-shared-color](https://github.com/hackyguru/logos-shared-color):
@@ -74,8 +153,11 @@ directly:
 
 ## Privacy, and why it is in the core
 
-The `nonce` on a rating is random per visitor and thrown away when the tablet
-is handed on. It exists so duplicates can be dropped, nothing more. It must
+The `nonce` on a rating is a random string generated for whoever is holding
+the tablet, joined to the dish's id so that one person's answers to different
+dishes stay separate: `k7f3a91c2-laal-maas`. The random half is thrown away
+when the tablet is handed on, so nothing links one visitor's answers to the
+next one's. It exists so duplicates can be dropped, nothing more, and it must
 never be derived from a device id, a key, or anything that survives a reset.
 
 `publishRating` in the core deliberately does **not** attach the sender id,
