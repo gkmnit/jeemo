@@ -1,84 +1,146 @@
 # Jeemo
 
-Everyone eats together. Nobody can say anything about it.
+*Jeemo* — from *jeeman*, Rajasthani for eating together as a community. The word
+itself is an invitation: **eat**.
 
-Jeemo is a dining-room feedback loop with no server in it: the kitchen puts up
-each meal, the people eating rate individual dishes and ask for things, and the
-kitchen sees what is actually worth cooking again. Built for the Logos and
-Zu-Grama Field Station in Rajasthan, India.
+A place where people eat together three times a day already has everything it
+needs to be interesting. Someone is cooking with care. Someone else grew the
+millet. Somebody at the table has never eaten ragi in their life and is about
+to. What is usually missing is any way for those facts to reach each other.
 
-## The problem
+Jeemo is a small piece of software for that gap. The kitchen puts up each meal
+with what is in it and how it was made. People eating see it before they arrive,
+say what they thought one dish at a time, and ask for what they would like next.
+The kitchen finally gets to see which dishes people actually want again.
 
-Hostels, residencies, offices, offsites, canteens, co-living houses. Anywhere a
-group eats food somebody else cooks, the same five things are missing.
+It was built at the Logos and Zu-Grama Field Station in Rajasthan, India, where
+twenty-odd people ate together for nine days, and every gap below showed up by
+the second meal.
 
-**Nobody knows what is coming.** No menu anywhere, or one pinned up where half
-the people never walk past. You find out what lunch is by arriving at lunch.
+<img src="docs/how-it-moves.svg" alt="Three screens pass messages to each other with no server in between" width="100%">
 
-**Nobody knows what is in it.** What went into the dish, whether it has nuts,
-whether it is veg today. The only way to find out is to find the cook and ask,
-every single time.
+## What is missing when a group eats together
 
-**There is no way to say what you thought.** The loudest person at the table
-gets heard. Everybody else eats quietly and says nothing, so a dish most of the
-room disliked comes back next week.
+Not complaints. Just things nobody has built, so everyone works around them.
 
-**There is no way to ask for anything.** No curd, too much chilli, something
-without onion. You either chase down the manager or you let it go.
+**You arrive at the food instead of meeting it.** There is no menu, or one
+pinned where half the house never walks past, so lunch is a surprise every day.
+Knowing what is coming changes how you turn up to it.
 
-**If you do ask, you never hear back.** You have no idea whether anyone wrote it
-down, whether it is happening, or whether you should ask again.
+**The cooking is invisible.** Somebody soaked the lentils last night, somebody
+chose millet over wheat, somebody's grandmother's proportions are in the pot.
+None of that reaches the plate. You eat the result and learn nothing.
 
-And from the other side, the kitchen is just as blind. The cook has no idea
-which dishes landed, which fell flat, what has been asked for twice already, or
-what people want more of. Months of cooking and no record of any of it.
+**Only the loudest opinion is heard.** One person says the dal was too salty and
+that becomes the view of the room. The eleven people who loved it said nothing,
+because there was nowhere to say it.
 
-## The name
+**Asking takes nerve.** More curd, less chilli, something without onion. Each is
+a small ask and each requires finding the right person and interrupting them, so
+most people just don't.
 
-**Jeemo** comes from *jeeman*, which in Rajasthani means eating together as a
-community. *Jeemo* is the invitation: eat. The idea started at the Logos and
-Zu-Grama Field Station in Rajasthan, where twenty-odd people ate together three
-times a day for nine days, and every one of the problems above showed up by the
-second meal.
+**Nobody hears back.** You ask once, nothing visibly happens, and you quietly
+stop asking. The kitchen may well have done it; you never found out.
 
-## What Jeemo does
+**And the kitchen cooks blind.** Months of meals and no record of which dishes
+landed. The cook is the person with the most to gain from knowing, and the
+person who knows least.
 
-Three screens, and whichever ones a place needs.
+## What Jeemo does about it
 
-**In the kitchen.** Put up each meal, dish by dish, with a description,
-ingredients and how it is made. Dishes cooked before come back with one tap and
-carry their history with them. After the meal, see exactly how each dish
-landed: a score out of five, how many wanted more, and what people wrote.
-Across days, see what is worth cooking again and what should be retired.
+### You meet the food before you eat it
 
-**Outside the dining room.** A screen showing today's meals in large type, with
-what is in each dish and how it was made, rotating through the day. And a panel
-showing what the kitchen has agreed to do about what people asked for, so the
-answer finds you instead of you chasing it.
+A screen outside the dining room shows today's meals in type you can read while
+walking past. Under each dish: what went into it, and how it was made. Not a
+label, a short account.
 
-**At the table, or on your own machine.** Rate each dish with one tap, write a
-note if you want to, and ask the kitchen for something, attached to a particular
-dish or meal so it means something. Then hand the tablet on, and it forgets you
-completely.
+This is the part that turns out to matter most. Once what is in the pot is
+written down, a meal stops being something handed to you and starts being
+something you know about. People find out what ragi is. Somebody discovers they
+have been eating drumstick for a week. Somebody with a nut allergy stops having
+to ask every time. The cook's work becomes visible for the first time.
 
-### What makes it different
+### Saying what you thought takes one tap
 
-**No server.** There is nothing to host, nothing to pay for, nobody who owns the
-data. The machines pass messages to each other directly and each keeps its own
-copy. Unplug the internet and it still works across the building.
+At the table, each dish gets three buttons: *more please*, *fine*, *not for me*.
+That is the whole interaction for most people. If you want to say more, there is
+a box, and what you write travels attached to your rating, so the kitchen can
+tell praise from complaint without guessing.
+
+Then you hand the tablet to the next person and it forgets you completely.
+
+### Asking becomes normal
+
+*Ask about this dish* sits under every dish, and *ask about this meal* under
+every meal, so a request arrives with its context attached. "Less chilli" means
+nothing; "less chilli in the sambhar" is something a cook can act on tomorrow.
+
+When the kitchen says yes, it appears on the board outside. The person who asked
+finds out by walking past, and everyone else learns that asking works. That
+second part is what makes the feature get used at all.
+
+### The kitchen gets a memory
+
+Each dish keeps its history. Cook it again and it comes back with its past
+attached: how often it has been made, how it scored, what people wrote. Over a
+week the kitchen can see what is worth repeating and what quietly nobody
+finishes.
+
+That record is also the most practical sustainability lever in a kitchen this
+size. Food is wasted mostly by cooking things people do not eat, and until now
+nobody had any way of knowing which those were.
+
+## What it is like to run
+
+**No server, no account, no company in between.** The machines pass messages to
+each other directly and each keeps its own copy. Nothing to host, nothing to
+pay for monthly, nobody who owns the data. Unplug the internet and it keeps
+working across the building, which matters more in rural Rajasthan than in a
+product meeting.
 
 **Nothing is traceable to you.** A rating carries no identity at all, and the
-one-time tag on it is thrown away the moment the tablet is handed on. A request
-carries no name either. That rule lives in the networking layer, not in the
-screens, so no future screen can quietly break it.
+one-time tag on it is thrown away the moment the tablet is handed on. Requests
+carry no name either. That rule lives in the networking layer rather than in the
+screens, so a screen written later cannot quietly break it.
 
 **You cannot be singled out.** A dish's breakdown stays hidden until three
 people have answered it. In a group of twenty, one visible complaint is an
-identified complainer.
+identified complainer, and then nobody complains again.
 
-**History is honest.** A dish's ratings belong to its name. Reusing a dish
-brings it back exactly as it was, and changing the recipe means giving it a new
-name, so last month's scores never quietly come to mean something else.
+**The history stays honest.** A dish's ratings belong to its name. Bring a dish
+back and it returns exactly as it was; change the recipe and it has to take a
+new name. Last month's scores never quietly come to mean something else.
+
+## Where this goes next
+
+Honest about the state of it: this is a working pilot, not a finished product.
+
+**The look is bounded by where it runs.** Jeemo lives inside Logos Basecamp, and
+Basecamp's module system decides what a screen can be. Everything here is drawn
+by hand in QML inside that frame. It works, and it is plainly a developer tool
+rather than something designed for a kitchen wall.
+
+Two ways out, and they are not exclusive:
+
+- **Basecamp itself improves.** It is young and moving. As its interface layer
+  grows, modules like this one inherit that for free.
+- **An ordinary front end over the same core.** Everything that matters in Jeemo
+  lives in one small networking piece with four methods. A normal web-style
+  interface could sit on top of it, bundled as an app you double click, with the
+  decentralised half unchanged underneath. The person using it would never need
+  to know what Basecamp is.
+
+Also not built yet, in the order I would do them: **photographs** of dishes,
+which need Codex and are most of what makes a food app worth looking at;
+**allergen and diet marks**, which the data model already has room for;
+**portions left**, one tap from the kitchen onto the board outside; and a
+**weekly sheet** for the cook, which is a view of data already collected rather
+than a new feature.
+
+---
+
+The rest of this document is for whoever is going to build on it: how the pieces
+fit together, what travels between them, and how to compile and install it.
 
 ## How it is built
 
@@ -347,7 +409,10 @@ between machines rather than merely survive a restart on one, and it is also
 the answer for dish photographs, which are far too large to put inside a
 message. Neither is wired up here.
 
-## Not done
+## Known limits
+
+See "Where this goes next" above for the product-level gaps. The engineering
+ones:
 
 - **Photographs.** The data model has room for them. They belong in Codex with
   only the reference travelling in the message.
